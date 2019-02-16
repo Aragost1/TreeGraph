@@ -1,0 +1,49 @@
+<html>
+<head><TITLE>tree</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv="Content-Type"/>
+<META content="Aragost.TreeGraph.xml2www" name="GENERATOR"/>
+<style>
+body{margin:0;padding:0}
+.b,.e,.t{text-decoration:none}
+.c{cursor:pointer}
+.b{font-family:'Courier New';font-weight:bold}
+.e{margin-left:1.3em;text-indent:-1.6em;border-left:1px solid;border-top:1px solid}
+</style>
+<XML id="source" src="example.xml"></XML>
+<XML id="style" src="divs.xsl"></XML>
+<script type="text/javascript" event="onload" for="window">
+var j="view.js";
+var _IS_IE = (navigator.userAgent.toLowerCase().indexOf("msie") > -1)?true:false;
+if (_IS_IE) document.body.innerHTML=(source.transformNode(style.XMLDocument)+"<script defer src='"+j+"'><"+"/script>");
+else {//ff hack
+var x="example.xml";
+var _IS_FF = (document.implementation && document.implementation.createDocument)?true:false;
+if (!_IS_FF) location.href=x;//opera hack
+var s="divs.xsl";
+function ff(){
+  var ajax = new XMLHttpRequest();
+  ajax.open("GET", s, false);
+  ajax.send(null);
+  var xslt = new XSLTProcessor();
+  xsl = ajax.responseXML;
+  xslt.importStylesheet(xsl);
+
+  ajax.open("GET", x, false);
+  ajax.send(null);
+  xmlDoc = ajax.responseXML;
+  var fragment = xslt.transformToFragment(xmlDoc, document);
+  document.body.innerHTML="";
+  document.body.appendChild(fragment);
+
+  js = document.createElement('script');
+  js.setAttribute('src', j);
+  document.getElementsByTagName('head').item(0).appendChild(js);
+}
+window.addEventListener('load',ff,false);
+}
+</script>
+</head>
+<body>
+Loading xml, xsl ...
+</body>
+</html>

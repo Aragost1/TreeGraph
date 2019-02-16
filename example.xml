@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<?xml-stylesheet href="view.xsl" type="text/xsl"?>
+<tree b="root">
+<n b="Blogs" h="example.xml">
+ <n b="monday 21 jan 2006 in home" s="have a fun"/>
+ <n b="1 jul 2006 in work" x="example.xml" s="work file"/>
+ <n b="sanday 12 sep 2006 in library" h="example.xml" t=" wn "/>
+</n>
+<n b="Family tree">
+ <n b="Daddy born 12jul phone123"/>
+ <n b="Mom born 14jan phone124"/>
+</n>
+<n b="Info">
+ <n b="Used programs">
+  <n b="e-mail"/>
+ </n>
+ <n b="Phones">
+  <n b="Friends"/>
+  <n b="co-Workers"/>
+ </n>
+ <n b="My body research">
+  <n b="daily support"/>
+  <n b="Sex">
+   <n b="female types"/>
+   <n b="love words"/>
+  </n>
+  <n b="medicine"/>
+ </n>
+</n>
+</tree>
